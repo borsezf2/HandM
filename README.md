@@ -2,7 +2,8 @@
 
 A new store application.
 
-read this for full detail of the project:
+# read this for full detail of the project:
+https://github.com/borsezf2/HandM/blob/master/report%20.pdf
 
 
 The goal of the project is to put in place new solutions for providing ease to the customers in the
