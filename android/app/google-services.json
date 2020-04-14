@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "944133598532",
+    "firebase_url": "https://minor-2-hb.firebaseio.com",
+    "project_id": "minor-2-hb",
+    "storage_bucket": "minor-2-hb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944133598532:android:82651c343165eeba0b3b11",
+        "android_client_info": {
+          "package_name": "borse.minor2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944133598532-p8ak9bptmvg8ldjp50vbavtvp6nq4lh8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "borse.minor2",
+            "certificate_hash": "9f33c166c21b724a1f246560fcb57a1dd615c1bc"
+          }
+        },
+        {
+          "client_id": "944133598532-h4l6buv5qa362ee3n8slohujb6hmrprq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9krmlMml3EHcYOF9a77xFkqhukCGXkI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "944133598532-h4l6buv5qa362ee3n8slohujb6hmrprq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

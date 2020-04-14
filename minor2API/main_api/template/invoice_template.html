@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A simple, clean, and responsive HTML invoice template</title>
+
+    <style>
+    .invoice-box {
+        max-width: 800px;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #555;
+    }
+
+    .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+    }
+
+    .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+
+
+
+    </style>
+</head>
+
+<body>
+{% load custom_tag %}
+    <div class="invoice-box">
+
+                    <table style="height:150px;">
+                        <tr>
+                            <td class="title">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCBuX6HvbczWzZoNnkyx-3QPp71Nj1CQHpGlHU4V5wEaNEYHq1vw&s" style="width:50%; max-width:300px;">
+                            </td>
+
+                            <td >
+                                Invoice #: {{order_id}}<br>
+                                Created: {{date}}<br>
+                            </td>
+                        </tr>
+                    </table>
+
+
+        <table >
+
+            <tr >
+                <td>
+                    <table >
+                        <tr  >
+                             <td align="left" width="50%">
+                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbw9WWvwOcU-FKuyd_E2AAgu9CnwLTrsLrd8WoEkK7y2M9aa8D&s" style="">
+                            </td>
+                            <td style="text-align:left;height:200px">
+                                store address
+                            </td>
+
+                            <td  align="right">
+                                {{customer_address}}<br>
+                                {{customer_email}}
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+
+            <table style="height:100px;">
+                  <tr>
+                    <th align="left" style="font-size:60px; width:600px" >Item Name</th>
+                    <th align="center" style="font-size:40px;">Price</th>
+                    <th align="center" style="font-size:40px;">Quantity</th>
+                    <th align="right" style="font-size:40px; text-align: right; width:400px">sub-total</th>
+
+                </tr>
+                {% for item in items %}
+                  <tr >
+                    <td align="left" style="font-size:30px; width:600px">{{item.name}}</td>
+                    <td align="center" style="font-size:25px;">{{item.price}} </td>
+                    <td align="center" style="font-size:25px;">{{item.quantity}}</td>
+                    <td align="right" style="font-size:30px; text-align:right;width:400px">{% multiply item.price item.quantity %}</td>
+                </tr>
+                {% endfor %}
+              <tr>
+                <th colspan="3" style="font-size:70px;">total</th>
+
+                <th align="right" style="font-size:50px; text-align: right;width:400px">{{total}}</th>
+
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>
